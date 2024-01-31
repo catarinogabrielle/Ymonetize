@@ -6,6 +6,7 @@
 
     @media only screen and (max-width: 910px) {
         align-items: start;
+        height: 100%;
     }
 }
 
@@ -86,7 +87,6 @@
     font-size: 15px;
     width: 80%;
     cursor: pointer;
-    -webkit-transition-duration: 0.4s;
     border-radius: 30px;
     transition-duration: 0.4s;
     margin-top: 45px
