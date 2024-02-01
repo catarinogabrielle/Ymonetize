@@ -21,7 +21,11 @@ export default function SignUp() {
 
   return (
     form ? (
-      <Form />
+      <Form
+        influencer={influencer}
+        socialMedia={socialMedia}
+        manager={manager}
+      />
     ) : (
       <div className={styles.container}>
         <h1>Para realizar seu cadastro, selecione seu <text className={styles.title}>Perfil</text></h1>
