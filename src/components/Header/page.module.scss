@@ -1,3 +1,71 @@
 .container {
   display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 250px;
+  padding: 15px 0 50px 0;
+  background-color: var(--color-white);
+  box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.158);
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  width: 100%;
+  padding: 20px 25px;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+
+  h1 {
+    color: var(--color-gray2);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: 0.2s;
+  }
+}
+
+.icon {
+  color: var(--color-gray2);
+  transition: 0.2s;
+}
+
+.box:hover {
+  background-color: var(--color-gray4);
+  border-left: 5px solid var(--color-primary);
+
+  .icon {
+    color: var(--color-primary);
+  }
+
+  h1 {
+    color: var(--color-primary);
+  }
+}
+
+.boxExit {
+  display: flex;
+  width: 100%;
+  padding: 20px 25px;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+
+  h1 {
+    color: var(--color-gray2);
+    font-size: 19px;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: 0.2s;
+  }
 }
