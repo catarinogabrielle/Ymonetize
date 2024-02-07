@@ -38,7 +38,7 @@ export default function Dashboard() {
         <div className={styles.box}>
           <h2>Promover Campanhas</h2>
 
-          <div>
+          <div className={styles.contentCampaigns}>
 
           </div>
         </div>
