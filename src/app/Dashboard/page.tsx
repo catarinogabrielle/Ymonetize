@@ -13,7 +13,7 @@ export default function Dashboard() {
 
   return (
     <div className={styles.container}>
-      <Header />
+      <Header status='Dashboard' />
       <div className={styles.content}>
         <h1 className={styles.titleHeader}>Dashboard</h1>
 
@@ -32,6 +32,14 @@ export default function Dashboard() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className={styles.box}>
+          <h2>Promover Campanhas</h2>
+
+          <div>
+
           </div>
         </div>
       </div>
