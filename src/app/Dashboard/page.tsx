@@ -1,6 +1,6 @@
 import styles from './page.module.scss';
 import { SiSimpleanalytics } from "react-icons/si";
-import Header from '../../components/Header/page'
+import Header from '../../components/Header/page';
 
 export default function Dashboard() {
   const arrayInfoEarnings = [

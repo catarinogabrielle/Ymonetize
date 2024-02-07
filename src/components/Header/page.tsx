@@ -1,5 +1,6 @@
 "use client"
 import { useState } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import styles from './page.module.scss';
 import { MdSpaceDashboard, MdMenu } from "react-icons/md";
@@ -24,25 +25,33 @@ export default function Header({ status }: { status: string }) {
           />
 
           <div className={styles.content}>
-            <div className={status == 'Dashboard' ? styles.boxActive : styles.box}>
-              <MdSpaceDashboard size={19} className={status == 'Dashboard' ? styles.iconActive : styles.icon} />
-              <h1>Dashboard</h1>
-            </div>
+            <Link href="/Dashboard">
+              <div className={status == 'Dashboard' ? styles.boxActive : styles.box}>
+                <MdSpaceDashboard size={19} className={status == 'Dashboard' ? styles.iconActive : styles.icon} />
+                <h1>Dashboard</h1>
+              </div>
+            </Link>
 
-            <div className={status == 'Report' ? styles.boxActive : styles.box}>
-              <IoDocumentText size={19} className={status == 'Report' ? styles.iconActive : styles.icon} />
-              <h1>Relatorios</h1>
-            </div>
+            <Link href="/Reports">
+              <div className={status == 'Reports' ? styles.boxActive : styles.box}>
+                <IoDocumentText size={19} className={status == 'Reports' ? styles.iconActive : styles.icon} />
+                <h1>Relatorios</h1>
+              </div>
+            </Link>
 
-            <div className={status == 'Payment' ? styles.boxActive : styles.box}>
-              <FaMoneyCheck size={19} className={status == 'Payment' ? styles.iconActive : styles.icon} />
-              <h1>Pagamentos</h1>
-            </div>
+            <Link href="/Payments">
+              <div className={status == 'Payments' ? styles.boxActive : styles.box}>
+                <FaMoneyCheck size={19} className={status == 'Payments' ? styles.iconActive : styles.icon} />
+                <h1>Pagamentos</h1>
+              </div>
+            </Link>
 
-            <div className={status == 'Profile' ? styles.boxActive : styles.box}>
-              <FaUser size={19} className={status == 'Profile' ? styles.iconActive : styles.icon} />
-              <h1>Perfil</h1>
-            </div>
+            <Link href="/Profile">
+              <div className={status == 'Profile' ? styles.boxActive : styles.box}>
+                <FaUser size={19} className={status == 'Profile' ? styles.iconActive : styles.icon} />
+                <h1>Perfil</h1>
+              </div>
+            </Link>
           </div>
         </div>
 
