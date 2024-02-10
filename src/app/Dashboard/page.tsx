@@ -10,11 +10,11 @@ export default function Dashboard() {
   const [earningsOpen, setEarningsOpen] = useState(true)
 
   const arrayInfoEarnings = [
-    { backgroundColor: '#F18A0E', period: 'Hoje (até o momento)', value: '1.238,00' },
-    { backgroundColor: '#F1370E', period: 'Ontem', value: '2.248,00' },
-    { backgroundColor: '#3BF10E', period: 'Últimos 7 dias', value: '19.124,00' },
-    { backgroundColor: '#2E0EF1', period: 'Este mês', value: '29.124,00' },
-    { backgroundColor: '#A80EF1', period: 'Próximo pagamento', value: '120.238,00' },
+    { id: 1, backgroundColor: '#F18A0E', period: 'Hoje (até o momento)', value: '1.238,00' },
+    { id: 2, backgroundColor: '#F1370E', period: 'Ontem', value: '2.248,00' },
+    { id: 3, backgroundColor: '#3BF10E', period: 'Últimos 7 dias', value: '19.124,00' },
+    { id: 4, backgroundColor: '#2E0EF1', period: 'Este mês', value: '29.124,00' },
+    { id: 5, backgroundColor: '#A80EF1', period: 'Próximo pagamento', value: '120.238,00' },
   ]
 
   return (
@@ -34,7 +34,7 @@ export default function Dashboard() {
 
           <div className={earningsOpen ? styles.contentEarnings : styles.contentEarningsNone}>
             {arrayInfoEarnings.map(item => (
-              <div className={styles.cardEarnings}>
+              <div key={item.id} className={styles.cardEarnings}>
                 <div style={{ backgroundColor: item.backgroundColor }} className={styles.contentIcon}>
                   <SiSimpleanalytics className={styles.icon} />
                 </div>
