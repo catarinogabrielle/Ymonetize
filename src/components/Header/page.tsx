@@ -6,14 +6,18 @@ import styles from './page.module.scss';
 import { MdSpaceDashboard, MdMenu } from "react-icons/md";
 import { IoDocumentText } from "react-icons/io5";
 import { FaUser, FaMoneyCheck } from "react-icons/fa";
-import { IoIosExit } from "react-icons/io";
+import { IoIosExit, IoMdClose } from "react-icons/io";
 
 export default function Header({ status }: { status: string }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <>
-      <MdMenu onClick={() => setMenuOpen(!menuOpen)} size={27} className={styles.menu} />
+      {menuOpen ? (
+        <IoMdClose onClick={() => setMenuOpen(!menuOpen)} size={27} className={styles.menu} />
+      ) : (
+        <MdMenu onClick={() => setMenuOpen(!menuOpen)} size={27} className={styles.menu} />
+      )}
 
       <div style={menuOpen ? { left: 0 } : { left: -300 }} className={styles.container}>
         <div>
