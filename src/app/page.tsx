@@ -9,6 +9,14 @@ export default function SignIn() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.icon}>
+        <Image
+          src="/ymonetize.png"
+          width={250}
+          height={100}
+          alt="ymbg"
+        />
+      </div>
       <div className={styles.content}>
         <div className={styles.background}>
           <Image
