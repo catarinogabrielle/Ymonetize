@@ -56,12 +56,6 @@
     margin-left: 15px;
     transition: 0.2s;
   }
-
-  @media only screen and (max-width: 900px) {
-    h1 {
-      font-size: 15px;
-    }
-  }
 }
 
 .icon {
@@ -69,7 +63,7 @@
   transition: 0.2s;
 
   @media only screen and (max-width: 900px) {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -102,18 +96,12 @@
     font-weight: 400;
     margin-left: 15px;
   }
-
-  @media only screen and (max-width: 900px) {
-    h1 {
-      font-size: 15px;
-    }
-  }
 }
 
 .iconActive {
   color: var(--color-primary);
 
   @media only screen and (max-width: 900px) {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
