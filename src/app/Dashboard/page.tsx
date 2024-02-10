@@ -1,8 +1,14 @@
+"use client"
+import { useState } from 'react';
 import styles from './page.module.scss';
 import { SiSimpleanalytics } from "react-icons/si";
+import { MdOutlineArrowDropDown, MdOutlineArrowDropUp } from "react-icons/md";
 import Header from '../../components/Header/page';
+import Image from 'next/image';
 
 export default function Dashboard() {
+  const [earningsOpen, setEarningsOpen] = useState(true)
+
   const arrayInfoEarnings = [
     { backgroundColor: '#F18A0E', period: 'Hoje (até o momento)', value: '1.238,00' },
     { backgroundColor: '#F1370E', period: 'Ontem', value: '2.248,00' },
@@ -18,9 +24,15 @@ export default function Dashboard() {
         <h1 className={styles.titleHeader}>Dashboard</h1>
 
         <div className={styles.box}>
-          <h2>Ganhos estimados</h2>
+          <h2>Ganhos estimados
+            {earningsOpen ? (
+              <MdOutlineArrowDropDown onClick={() => setEarningsOpen(!earningsOpen)} className={styles.iconSelect} />
+            ) : (
+              <MdOutlineArrowDropUp onClick={() => setEarningsOpen(!earningsOpen)} className={styles.iconSelect} />
+            )}
+          </h2>
 
-          <div className={styles.contentEarnings}>
+          <div className={earningsOpen ? styles.contentEarnings : styles.contentEarningsNone}>
             {arrayInfoEarnings.map(item => (
               <div className={styles.cardEarnings}>
                 <div style={{ backgroundColor: item.backgroundColor }} className={styles.contentIcon}>
@@ -39,7 +51,405 @@ export default function Dashboard() {
           <h2>Promover Campanhas</h2>
 
           <div className={styles.contentCampaigns}>
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
 
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
+
+
+            <div className={styles.cardCampaigns}>
+              <div className={styles.infoCampaigns}>
+                <Image
+                  className={styles.img}
+                  src="/carro.jpg"
+                  width={100}
+                  height={70}
+                  alt="campaigns"
+                />
+
+                <text>Financiamento de carros
+                  parcelas a partir de R$227,90</text>
+              </div>
+
+              <div className={styles.warnCampaigns}>
+                <p>Ganhe R$0,40 por visita</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

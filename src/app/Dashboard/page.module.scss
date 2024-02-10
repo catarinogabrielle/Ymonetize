@@ -16,6 +16,10 @@
   width: 100%;
   padding: 40px;
 
+  @media only screen and (min-width: 901px) {
+    overflow-y: scroll;
+  }
+
   @media only screen and (max-width: 900px) {
     padding: 25px 20px;
   }
@@ -38,16 +42,18 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 30px 0 10px 0;
+  margin-top: 25px;
 
   h2 {
     color: var(--color-gray2);
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
   }
 
   @media only screen and (max-width: 900px) {
-    margin: 20px 0 10px 0;
+    margin-top: 20px;
 
     h2 {
       font-size: 19px;
@@ -55,14 +61,30 @@
   }
 }
 
+.iconSelect {
+  font-size: 35px;
+  cursor: pointer;
+  margin-top: 2px;
+  color: var(--color-dark);
+
+  @media only screen and (max-width: 900px) {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+}
+
+.contentEarningsNone {
+  display: none;
+}
+
 .contentEarnings {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 10px;
 
   @media only screen and (max-width: 900px) {
-    margin-top: 20px;
+    margin-top: 8px;
   }
 }
 
@@ -87,13 +109,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
 
 .icon {
-  font-size: 17px;
+  font-size: 16px;
   color: var(--color-white);
 }
 
@@ -111,14 +133,123 @@
 
   h3 {
     color: var(--color-dark);
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
-    margin-top: 15px;
+    margin-top: 10px;
+  }
+}
+
+.contentCampaigns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 15px 10px;
+  background-color: var(--color-gray5);
+  margin: 10px;
+  max-height: 520px;
+
+  @media only screen and (min-width: 901px) {
+    overflow-y: scroll;
   }
 
   @media only screen and (max-width: 900px) {
-    h3 {
-      margin-top: 13px;
+    margin: 8px 0 30px 0;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+/* width */
+.contentCampaigns::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.contentCampaigns::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(128, 128, 128);
+  border-radius: 10px;
+}
+
+/* Handle */
+.contentCampaigns::-webkit-scrollbar-thumb {
+  background: rgb(138, 138, 138);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.contentCampaigns::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray2);
+}
+
+.cardCampaigns {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--color-white);
+  box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.23);
+  justify-content: space-between;
+  margin: 0 6px 16px 6px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+  }
+}
+
+.cardCampaigns:hover {
+  scale: 1.02;
+}
+
+.infoCampaigns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text {
+    color: var(--color-dark);
+    font-size: 13px;
+    width: 90%;
+    text-align: center;
+    margin: 12px 0;
+  }
+
+  @media only screen and (max-width: 900px) {
+    flex-direction: row;
+    width: 95%;
+    margin: 12px 0;
+
+    text {
+      margin: 0;
     }
+  }
+}
+
+.img {
+  width: 93%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 6px;
+
+  @media only screen and (max-width: 900px) {
+    margin: 0;
+  }
+}
+
+.warnCampaigns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 5px 0;
+  border-radius: 0 0 8px 8px;
+
+  p {
+    color: var(--color-white);
+    font-size: 12px;
   }
 }

@@ -27,28 +27,28 @@ export default function Header({ status }: { status: string }) {
           <div className={styles.content}>
             <Link href="/Dashboard">
               <div className={status == 'Dashboard' ? styles.boxActive : styles.box}>
-                <MdSpaceDashboard size={19} className={status == 'Dashboard' ? styles.iconActive : styles.icon} />
+                <MdSpaceDashboard size={18} className={status == 'Dashboard' ? styles.iconActive : styles.icon} />
                 <h1>Dashboard</h1>
               </div>
             </Link>
 
             <Link href="/Reports">
               <div className={status == 'Reports' ? styles.boxActive : styles.box}>
-                <IoDocumentText size={19} className={status == 'Reports' ? styles.iconActive : styles.icon} />
+                <IoDocumentText size={18} className={status == 'Reports' ? styles.iconActive : styles.icon} />
                 <h1>Relatorios</h1>
               </div>
             </Link>
 
             <Link href="/Payments">
               <div className={status == 'Payments' ? styles.boxActive : styles.box}>
-                <FaMoneyCheck size={19} className={status == 'Payments' ? styles.iconActive : styles.icon} />
+                <FaMoneyCheck size={18} className={status == 'Payments' ? styles.iconActive : styles.icon} />
                 <h1>Pagamentos</h1>
               </div>
             </Link>
 
             <Link href="/Profile">
               <div className={status == 'Profile' ? styles.boxActive : styles.box}>
-                <FaUser size={19} className={status == 'Profile' ? styles.iconActive : styles.icon} />
+                <FaUser size={16} className={status == 'Profile' ? styles.iconActive : styles.icon} />
                 <h1>Perfil</h1>
               </div>
             </Link>
@@ -56,7 +56,7 @@ export default function Header({ status }: { status: string }) {
         </div>
 
         <div className={styles.box}>
-          <IoIosExit size={24} className={styles.icon} />
+          <IoIosExit size={23} className={styles.icon} />
           <h1>Sair</h1>
         </div>
       </div>
