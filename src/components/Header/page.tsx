@@ -55,10 +55,12 @@ export default function Header({ status }: { status: string }) {
           </div>
         </div>
 
-        <div className={styles.box}>
-          <IoIosExit size={23} className={styles.icon} />
-          <h1>Sair</h1>
-        </div>
+        <Link href="/">
+          <div className={styles.box}>
+            <IoIosExit size={23} className={styles.icon} />
+            <h1>Sair</h1>
+          </div>
+        </Link>
       </div>
     </>
   )

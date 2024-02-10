@@ -1,8 +1,12 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from "./page.module.scss";
+import { useRouter } from 'next/navigation';
 
 export default function SignIn() {
+  const router = useRouter()
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -27,7 +31,7 @@ export default function SignIn() {
             name="password"
             placeholder='Digite sua senha'
           />
-          <button className={styles.btn}>Entrar</button>
+          <button onClick={() => router.push('/Dashboard')} className={styles.btn}>Entrar</button>
 
           <div className={styles.contentRegister}>
             <text>Se você ainda não tem uma conta</text>
