@@ -1,5 +1,6 @@
 "use client"
 import { useState } from 'react';
+import Link from 'next/link';
 import styles from './page.module.scss';
 import { SiSimpleanalytics } from "react-icons/si";
 import { MdOutlineArrowDropDown, MdOutlineArrowDropUp } from "react-icons/md";
@@ -51,24 +52,26 @@ export default function Dashboard() {
           <h2>Promover Campanhas</h2>
 
           <div className={styles.contentCampaigns}>
-            <div className={styles.cardCampaigns}>
-              <div className={styles.infoCampaigns}>
-                <Image
-                  className={styles.img}
-                  src="/carro.jpg"
-                  width={100}
-                  height={70}
-                  alt="campaigns"
-                />
+            <Link href="/Campaign">
+              <div className={styles.cardCampaigns}>
+                <div className={styles.infoCampaigns}>
+                  <Image
+                    className={styles.img}
+                    src="/carro.jpg"
+                    width={100}
+                    height={70}
+                    alt="campaigns"
+                  />
 
-                <text>Financiamento de carros
-                  parcelas a partir de R$227,90</text>
-              </div>
+                  <text>Financiamento de carros
+                    parcelas a partir de R$227,90</text>
+                </div>
 
-              <div className={styles.warnCampaigns}>
-                <p>Ganhe R$0,40 por visita</p>
+                <div className={styles.warnCampaigns}>
+                  <p>Ganhe R$0,40 por visita</p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
