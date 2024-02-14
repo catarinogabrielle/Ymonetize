@@ -21,12 +21,15 @@ export default function Header({ status }: { status: string }) {
 
       <div style={menuOpen ? { left: 0 } : { left: -300 }} className={styles.container}>
         <div>
-          <Image
-            src="/ymonetize.png"
-            width={180}
-            height={70}
-            alt="ymbg"
-          />
+          <Link href="/Dashboard">
+            <Image
+              src="/ymonetize.png"
+              width={180}
+              height={70}
+              alt="ymbg"
+              style={{ cursor: 'pointer' }}
+            />
+          </Link>
 
           <div className={styles.content}>
             <Link href="/Dashboard">

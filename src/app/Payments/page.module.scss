@@ -16,6 +16,10 @@
   width: 100%;
   padding: 40px;
 
+  @media only screen and (min-width: 901px) {
+    overflow-y: scroll;
+  }
+
   @media only screen and (max-width: 900px) {
     padding: 25px 20px;
   }
@@ -31,5 +35,122 @@
   @media only screen and (max-width: 900px) {
     font-size: 22px;
     width: 100%;
+  }
+}
+
+.contentBoxTop {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 25px;
+
+  @media only screen and (max-width: 1245px) {
+    margin-top: 20px;
+  }
+}
+
+.boxTop {
+  display: flex;
+  background-color: var(--color-white);
+  padding: 20px 50px 20px 20px;
+  box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.23);
+  flex-direction: column;
+  border-radius: 8px;
+  margin-right: 15px;
+
+  h1 {
+    font-size: 22px;
+    color: var(--color-dark);
+  }
+
+  h2 {
+    font-size: 22px;
+    color: var(--color-primary);
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+  }
+
+  text {
+    font-size: 12px;
+    color: var(--color-dark);
+    font-weight: 300;
+    margin-left: 7px;
+  }
+
+  @media only screen and (max-width: 1245px) {
+    margin: 0 0 15px 0;
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+.boxTopBank {
+  display: flex;
+  background-color: var(--color-gray9);
+  padding: 20px 50px 20px 20px;
+  flex-direction: column;
+  border-radius: 8px;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  h1 {
+    font-size: 22px;
+    color: var(--color-white);
+  }
+
+  h2 {
+    font-size: 17px;
+    color: var(--color-white);
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+  }
+
+  @media only screen and (max-width: 1245px) {
+    margin: 0 0 15px 0;
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+.boxTopBank:hover {
+  scale: 1.02;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+  background-color: var(--color-white);
+
+  td,
+  th {
+    border: none;
+    color: var(--color-gray7);
+    cursor: pointer;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--color-gray1);
+  }
+
+  th {
+    padding: 13px 8px;
+    font-weight: bold;
+    background-color: var(--color-secundary);
+  }
+
+  td {
+    font-weight: 300;
+    padding: 12px 8px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    display: none;
   }
 }

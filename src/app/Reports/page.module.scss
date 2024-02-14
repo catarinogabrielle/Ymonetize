@@ -16,6 +16,10 @@
   width: 100%;
   padding: 40px;
 
+  @media only screen and (min-width: 901px) {
+    overflow-y: scroll;
+  }
+
   @media only screen and (max-width: 900px) {
     padding: 25px 20px;
   }
@@ -31,5 +35,134 @@
   @media only screen and (max-width: 900px) {
     font-size: 22px;
     width: 100%;
+  }
+}
+
+.contentBoxTop {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 25px;
+
+  @media only screen and (max-width: 1245px) {
+    margin-top: 20px;
+  }
+}
+
+.boxTop {
+  display: flex;
+  background-color: var(--color-white);
+  padding: 20px 15px;
+  box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.23);
+  flex-direction: column;
+  border-radius: 8px;
+  margin-right: 15px;
+
+  @media only screen and (max-width: 1245px) {
+    margin: 0 0 15px 0;
+    width: 100%;
+  }
+}
+
+.nameBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  h1 {
+    font-size: 20px;
+    color: var(--color-dark);
+    margin-left: 7px;
+  }
+
+  @media only screen and (max-width: 1245px) {
+    h1 {
+      font-size: 18px;
+    }
+  }
+}
+
+.boxIcon {
+  padding: 7px 11px;
+  border-radius: 30px;
+
+  @media only screen and (max-width: 1245px) {
+    padding: 5px 9px;
+  }
+}
+
+.icon {
+  color: var(--color-white);
+  font-size: 12px;
+}
+
+.infoBoxTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 25px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 110px;
+  }
+
+  p {
+    font-size: 13px;
+    color: var(--color-gray8);
+  }
+
+  h2 {
+    font-size: 17px;
+    margin-top: 7px;
+    color: var(--color-dark);
+  }
+
+  @media only screen and (max-width: 1245px) {
+    div {
+      margin-right: 60px;
+    }
+
+    h2 {
+      font-size: 15px;
+    }
+  }
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+  background-color: var(--color-white);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.242);
+
+  td,
+  th {
+    border: none;
+    color: var(--color-gray7);
+    cursor: pointer;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--color-gray1);
+  }
+
+  th {
+    padding: 13px 8px;
+    font-weight: bold;
+    background-color: var(--color-secundary);
+  }
+
+  td {
+    font-weight: 300;
+    padding: 12px 8px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    display: none;
   }
 }
