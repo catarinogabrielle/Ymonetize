@@ -83,13 +83,6 @@
   flex-direction: column;
   margin-top: 15px;
 
-  div {
-    display: flex;
-    margin-top: 10px;
-    background-color: var(--color-gray5);
-    padding: 15px 10px;
-  }
-
   label {
     color: var(--color-gray2);
     font-size: 13px;
@@ -97,10 +90,19 @@
     margin-top: 15px;
   }
 
-  text {
-    color: var(--color-dark);
-    font-size: 14px;
-    font-weight: 400;
+  div {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  input {
+    background-color: var(--color-gray5);
+    padding: 15px 10px;
+    color: var(--color-gray2);
+    font-size: 13px;
+    width: 80%;
+    font-weight: 600;
   }
 
   @media only screen and (max-width: 900px) {
@@ -110,4 +112,23 @@
       font-size: 13px;
     }
   }
+}
+
+.btn {
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-white);
+  width: max-content;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding: 15px;
+  margin-left: 10px;
+}
+
+.btn:hover {
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.23);
 }
