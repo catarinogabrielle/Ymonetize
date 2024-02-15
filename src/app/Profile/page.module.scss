@@ -98,6 +98,7 @@
     width: 80%;
     font-weight: 600;
     margin-top: 8px;
+    border-radius: 8px;
   }
 
   @media only screen and (max-width: 900px) {
@@ -125,6 +126,7 @@
   cursor: pointer;
   transition-duration: 0.4s;
   padding: 15px;
+  border-radius: 8px;
   margin-top: 30px;
 
   @media only screen and (max-width: 900px) {
