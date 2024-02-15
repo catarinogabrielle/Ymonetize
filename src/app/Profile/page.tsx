@@ -16,14 +16,41 @@ export default function Profile() {
 
           <div className={styles.boxInfo}>
             <label>Label</label>
-            <div>
-              <input
-                type="text"
-                name="name"
-                placeholder='Informações pessoais'
-              />
-              <button className={styles.btn}>Atualizar</button>
-            </div>
+            <input
+              type="text"
+              name="name"
+              placeholder='Informações pessoais'
+            />
+
+            <label>Label</label>
+            <input
+              type="text"
+              name="name"
+              placeholder='Informações pessoais'
+            />
+
+            <label>Label</label>
+            <input
+              type="text"
+              name="name"
+              placeholder='Informações pessoais'
+            />
+
+            <label>Label</label>
+            <input
+              type="text"
+              name="name"
+              placeholder='Informações pessoais'
+            />
+
+            <label>Label</label>
+            <input
+              type="text"
+              name="name"
+              placeholder='Informações pessoais'
+            />
+
+            <button className={styles.btn}>Atualizar</button>
           </div>
         </div>
       </div>
