@@ -29,31 +29,6 @@ export default function Profile() {
             <div>
               <text>Informações pessoais</text>
             </div>
-
-            <label>Label</label>
-            <div>
-              <text>Informações pessoais</text>
-            </div>
-
-            <label>Label</label>
-            <div>
-              <text>Informações pessoais</text>
-            </div>
-
-            <label>Label</label>
-            <div>
-              <text>Informações pessoais</text>
-            </div>
-
-            <label>Label</label>
-            <div>
-              <text>Informações pessoais</text>
-            </div>
-
-            <label>Label</label>
-            <div>
-              <text>Informações pessoais</text>
-            </div>
           </div>
         </div>
       </div>
