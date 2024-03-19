@@ -63,8 +63,7 @@ export default function Dashboard() {
                     alt="campaigns"
                   />
 
-                  <text>Financiamento de carros
-                    parcelas a partir de R$227,90</text>
+                  <text>Financiamento de carros parcelas a partir de R$227,90</text>
                 </div>
 
                 <div className={styles.warnCampaigns}>

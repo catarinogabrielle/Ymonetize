@@ -2,7 +2,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import styles from './page.module.scss';
-import Form from '../../components/Form/page'
+import Form from '../../components/Form/page';
 
 export default function SignUp() {
   const [activeBtn, setActiveBtn] = useState(false)

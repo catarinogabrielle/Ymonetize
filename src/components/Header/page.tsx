@@ -11,7 +11,7 @@ import { IoIosExit, IoMdClose } from "react-icons/io";
 
 export default function Header({ status }: { status: string }) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [statusUser, setStatusUser] = useState('')
+  const [statusUser, setStatusUser] = useState('Admin')
 
   return (
     <>
@@ -69,14 +69,14 @@ export default function Header({ status }: { status: string }) {
                 <Link href="/Create_Campaign">
                   <div className={status == 'CreateCampaign' ? styles.boxActive : styles.box}>
                     <MdCampaign size={25} className={status == 'CreateCampaign' ? styles.iconActive : styles.icon} />
-                    <h1>Criar/Campanha</h1>
+                    <h1>Campanhas</h1>
                   </div>
                 </Link>
 
                 <Link href="/Create_Reports">
                   <div className={status == 'CreateReports' ? styles.boxActive : styles.box}>
                     <BiSolidReport size={19} className={status == 'CreateReports' ? styles.iconActive : styles.icon} />
-                    <h1>Criar/Relatórios</h1>
+                    <h1>Relatórios</h1>
                   </div>
                 </Link>
               </>

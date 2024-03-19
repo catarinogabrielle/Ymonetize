@@ -51,7 +51,7 @@ export default function Campaign() {
               <p>Financiamento de carros parcelas a partir de R$227,90</p>
               <p>Financiamento de carros novos e usados</p>
 
-              <h1>Descrições</h1>
+              <h1>Descrição</h1>
               <p>Para ter acesso a essa linha de credito, acesso o site e faça uma simulação.</p>
             </div>
 
