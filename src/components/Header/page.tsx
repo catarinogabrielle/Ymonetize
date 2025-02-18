@@ -12,6 +12,7 @@ import { IoIosExit, IoMdClose } from "react-icons/io";
 export default function Header({ status }: { status: string }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [statusUser, setStatusUser] = useState('')
+  //const [statusUser, setStatusUser] = useState('Admin')
 
   return (
     <>
